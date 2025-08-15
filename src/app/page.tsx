@@ -7,10 +7,10 @@ import { Projects } from "@/components/projects";
 export default function Home() {
   return (
     <div className="w-full overflow-auto">
-      <NavbarComp />
+      {/* <NavbarComp /> */}
       <HeroSection />
       <About />
-      <Projects />
+      {/* <Projects /> */}
     </div>
   );
 }
