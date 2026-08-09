@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { useServerFn } from "@tanstack/react-start";
 import { AlertCircle, CheckCircle2, Loader2, Mail, Phone, Send } from "lucide-react";
 import { z } from "zod";
 import { profile } from "@/data/portfolio";
-import { sendContactMessage } from "@/lib/contact.functions";
+import { sendContactMessage } from "@/lib/contact";
 import { Reveal, Section, SectionHeading } from "./primitives";
 import { SocialLinks } from "./SocialLinks";
 
@@ -24,7 +23,6 @@ const fieldClass =
   "w-full rounded-xl border border-input bg-background/60 px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary/60";
 
 export function ContactForm() {
-  const send = useServerFn(sendContactMessage);
   const [values, setValues] = useState<Values>({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -53,7 +51,7 @@ export function ContactForm() {
     setStatus("loading");
     setErrorMessage("");
     try {
-      await send({ data: parsed.data });
+      await sendContactMessage(parsed.data);
       setStatus("success");
       setValues({ name: "", email: "", message: "" });
     } catch (err) {
