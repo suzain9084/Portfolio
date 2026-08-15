@@ -31,16 +31,18 @@ export const stats = [
 ];
 
 export const skillGroups = [
-  { title: "Programming Languages", items: ["C", "C++", "JavaScript", "TypeScript", "Python"] },
-  { title: "Frontend", items: ["React.js", "Redux", "Next.js", "HTML", "CSS", "Tailwind CSS"] },
+  { title: "Programming Languages", items: ["C++", "C", "JavaScript", "TypeScript", "Python"] },
+  { title: "Frontend", items: ["React.js", "Next.js", "Redux", "HTML", "CSS", "Tailwind CSS"] },
   {
     title: "Backend",
     items: [
       "Node.js",
       "Express.js",
       "Flask",
+      "FastAPI",
       "REST APIs",
-      "microservices",
+      "Microservices",
+      "RabbitMQ",
       "JWT",
       "WebSocket",
       "WebRTC",
@@ -49,23 +51,29 @@ export const skillGroups = [
   {
     title: "Machine Learning",
     items: [
+      "Neural Network",
       "PyTorch",
+      "FFNs",
       "CNNs",
-      "RNN",
+      "RNNs",
       "Transformers",
-      "KNN",
-      "Decision Trees",
-      "Neural Networks",
       "NLP",
-      "LangChain",
+      "Agentic AI",
+      "Langchain",
       "LangGraph",
     ],
   },
   { title: "Databases", items: ["SQL", "MongoDB", "SQLAlchemy", "Mongoose", "Supabase"] },
   { title: "Cloud & Tools", items: ["AWS", "S3", "Lambda", "EC2", "Git", "GitHub"] },
   {
-    title: "Other",
-    items: ["Data Structures & Algorithms", "OOP", "Chrome Extension Development"],
+    title: "Core concepts",
+    items: [
+      "Data Structures & Algorithms",
+      "Object Oriented Programming",
+      "DBMS",
+      "Computer Networks",
+      "System Design",
+    ],
   },
 ];
 
@@ -119,6 +127,57 @@ export const projects: Project[] = [
     results: ["90%+ complaint classification accuracy.", "70% faster grievance routing."],
     tech: ["Python", "Flask", "NLP", "Microservices", "SQL", "AI/ML"],
     github: "https://github.com/suzain9084/AI-Based-Grivance-Management-System",
+  },
+  {
+    slug: "playdeck",
+
+    title: "PlayDeck — Browser-Based Multiplayer Party Gaming Platform",
+
+    category: "Full-Stack • Real-Time WebSockets",
+
+    short:
+      "A browser-based party gaming platform that turns phones into wireless controllers for real-time multiplayer gaming.",
+
+    problem:
+      "Traditional local multiplayer gaming often requires dedicated consoles, controllers, app downloads, or account setup, creating unnecessary friction for casual group gaming.",
+
+    solution:
+      "Built PlayDeck, a browser-based multiplayer gaming platform where a TV or laptop acts as the shared screen and players use their phones as wireless controllers, joining instantly through an 8-character room code or QR scan.",
+
+    approach: [
+      "Built a FastAPI WebSocket server with room management for real-time player connections, host assignment, lifecycle management, and message broadcasting.",
+
+      "Implemented a React + TypeScript frontend with Redux Toolkit to manage room state, connected players, host navigation, game phases, and active games.",
+
+      "Designed a reusable game architecture separating screen-side game components from mobile controller components, allowing new games to be added through a component mapping system.",
+
+      "Implemented QR-based room joining and an event-driven WebSocket protocol to relay controller inputs between phones and the shared screen.",
+
+      "Deployed the frontend on Vercel and the backend on Render with separate development and production WebSocket configurations.",
+    ],
+
+    results: [
+      "Enabled real-time multiplayer gaming using phones as wireless controllers without app installation or user accounts.",
+
+      "Created an extensible architecture where new games can be integrated through independent game and controller modules.",
+    ],
+
+    tech: [
+      "React",
+      "TypeScript",
+      "FastAPI",
+      "Python",
+      "WebSockets",
+      "Redux Toolkit",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Vitest",
+      "Vercel",
+      "Render",
+    ],
+
+    github: "https://github.com/suzain9084/playdeck",
   },
   {
     slug: "ai-email-agent",
@@ -184,6 +243,42 @@ export const projects: Project[] = [
     results: ["80% reduction in manual workload.", "5× faster document processing."],
     tech: ["AI/ML", "NLP", "Document Processing", "Automation"],
     github: "https://github.com/suzain9084/filling-manager",
+  },
+  {
+    slug: "photo-gallery-app",
+
+    title: "Secure Photo Gallery",
+
+    category: "Full-Stack • MERN",
+
+    short:
+      "A secure photo management platform for creating accounts, uploading photos, and accessing personal collections.",
+
+    problem:
+      "Managing personal photos requires a simple and secure platform where users can store and access their collections without exposing their data to other users.",
+
+    solution:
+      "Built a full-stack photo gallery application with user authentication, secure photo uploads, and personal photo management using React.js, Node.js, Express, and MongoDB.",
+
+    approach: [
+      "Built a responsive React.js interface for user authentication and seamless photo collection management.",
+
+      "Developed a Node.js and Express backend to handle user accounts, photo uploads, and protected access to personal collections.",
+
+      "Used MongoDB with Mongoose for structured persistence of user and photo-related data.",
+
+      "Implemented user-specific access controls to keep personal photo collections isolated and secure.",
+    ],
+
+    results: [
+      "Enabled users to securely upload and access their personal photo collections.",
+
+      "Delivered a seamless full-stack experience for managing photos through a user-friendly web interface.",
+    ],
+
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Mongoose"],
+
+    github: "https://github.com/suzain9084/Photo-Gallery-App",
   },
 ];
 
