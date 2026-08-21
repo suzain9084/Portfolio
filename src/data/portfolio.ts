@@ -343,7 +343,7 @@ export const education = [
     degree: "B.Tech. Computer Science and Engineering (AI & ML)",
     school: "Faculty of Technology, University of Delhi",
     period: "2023 – 2027",
-    cgpa: "8.87",
+    cgpa: "8.9",
   },
 ];
 
