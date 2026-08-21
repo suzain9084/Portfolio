@@ -331,7 +331,7 @@ export const achievements = [
   },
   {
     icon: "code" as const,
-    title: "650+ LeetCode Problems",
+    title: "700+ LeetCode Problems",
     detail:
       "Solved 650+ Data Structures and Algorithms problems on LeetCode using C++, strengthening expertise in algorithms, data structures and problem solving.",
     tag: "C++",
