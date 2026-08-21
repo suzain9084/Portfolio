@@ -24,8 +24,8 @@ export const profile = {
 };
 
 export const stats = [
-  { value: 8.87, suffix: "", decimals: 2, label: "CGPA / 10" },
-  { value: 650, suffix: "+", decimals: 0, label: "DSA Problems Solved" },
+  { value: 8.9, suffix: "", decimals: 2, label: "CGPA / 10" },
+  { value: 700, suffix: "+", decimals: 0, label: "DSA Problems Solved" },
   { value: 100, suffix: "+", decimals: 0, label: "Extension Users" },
   { value: 1, suffix: "st", decimals: 0, label: "CodeFOT DSA Competition" },
 ];
@@ -111,23 +111,55 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "grievance-management",
+
     title: "AI-Based Grievance Management System",
-    category: "Full-Stack • Microservices",
+
+    category: "Full-Stack • Microservices • AI/ML",
+
     short:
-      "A microservices grievance platform with 90%+ complaint classification accuracy and 70% faster routing.",
+      "An AI-powered microservices grievance platform that automates complaint classification, routing, and real-time notifications.",
+
     problem:
-      "Grievances pile up in shared inboxes and get routed by hand, delaying resolution and losing accountability.",
+      "Grievances in educational institutions are often handled through manual processes, making it difficult to route complaints efficiently, track their status, and maintain accountability.",
+
     solution:
-      "Built an AI-driven grievance management platform using Microservices Architecture, achieving 90%+ complaint classification accuracy and 70% faster grievance routing through NLP-based automation.",
+      "Built an AI-driven grievance management platform using Microservices Architecture, with NLP-based committee classification, multilingual speech-to-text, centralized API routing, and real-time notifications to automate the grievance lifecycle.",
+
     approach: [
-      "Microservices architecture separating intake, classification and routing concerns.",
-      "NLP classification model mapping complaints to the right department.",
-      "Flask services backed by SQL for persistence and auditability.",
+      "Designed a microservices architecture with dedicated User, Grievance, Admin, ML, and Notification services behind a centralized API Gateway.",
+      "Implemented NLP-based zero-shot classification using BART-large-MNLI to automatically route grievances to the appropriate committee.",
+      "Integrated multilingual speech-to-text and Gemini-based translation to support voice and non-English grievance submissions.",
+      "Implemented JWT-based authentication, role-based access control, and API rate limiting across services.",
+      "Integrated RabbitMQ for asynchronous notification processing and WebSockets for real-time grievance updates.",
+      "Used MySQL with SQLAlchemy for persistent grievance data, user management, analytics, and auditability.",
     ],
-    results: ["90%+ complaint classification accuracy.", "70% faster grievance routing."],
-    tech: ["Python", "Flask", "NLP", "Microservices", "SQL", "AI/ML"],
-    github: "https://github.com/suzain9084/AI-Based-Grivance-Management-System",
+
+    results: [
+      "Automated grievance classification and committee routing.",
+      "Enabled multilingual voice-based grievance submission.",
+      "Real-time grievance notifications through RabbitMQ and WebSockets.",
+      "Centralized authentication, routing, and rate limiting through an API Gateway.",
+    ],
+
+    tech: [
+      "Python",
+      "Flask",
+      "React",
+      "NLP",
+      "BART-large-MNLI",
+      "Google Gemini",
+      "Microservices",
+      "RabbitMQ",
+      "WebSockets",
+      "MySQL",
+      "JWT",
+      "Docker",
+    ],
+
+    github:
+      "https://github.com/suzain9084/AI-Based-Grivance-Management-System/tree/micro-service-architecture",
   },
+
   {
     slug: "playdeck",
 
